@@ -9,8 +9,7 @@
 // На базе данной функции необходимо реализовать тестовый или полноценный проект.
 #include "logic.h"
 
-
-int swap_if(int* a, int* b) {
+void swap_if(int* a, int* b) {
 	if (*a < *b) {
 		int t = *a;
 		*a = *b;
