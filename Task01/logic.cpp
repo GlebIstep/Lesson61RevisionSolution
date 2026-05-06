@@ -9,22 +9,17 @@
 // На базе данной функции необходимо реализовать тестовый или полноценный проект.
 #include "logic.h"
 
-void get_in_order(int a, int b, int c) {
-	int t;
 
-	if (a > b) {
-		t = a;
-		a = b;
-		b = t;
+int swap_if(int* a, int* b) {
+	if (*a < *b) {
+		int t = *a;
+		*a = *b;
+		*b = t;
 	}
-	if (a < c) {
-		t = a;
-		a = c;
-		c = t;
-	}
-	if (b < c) {
-		t = b;
-		b = c;
-		c = t;
-	}
+}
+
+void get_in_order(int* a, int* b, int* c) {
+	swap_if(a, b);
+	swap_if(a, c);
+	swap_if(b, c);
 }
